@@ -9,7 +9,7 @@ public  class Career : MonoBehaviour
     protected int m_strength;
 
     //METHODS
-    protected virtual void Attack(Character target)
+    public virtual void Attack(Character target)
     {
         int damage = this.m_strength - target.m_resistance;
         target.m_pv -= damage;

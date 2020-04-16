@@ -12,6 +12,11 @@ public class Character : MonoBehaviour
     public int m_resistance;
     private Career m_career;
     private BoxCollider2D m_collider;
+    public enum Dir
+    {
+        back, front, right, left, no_dir
+    };
+    public Dir m_character_orientation;
     public enum CharacterSide
     {
         ally,
@@ -39,5 +44,15 @@ public class Character : MonoBehaviour
         this.is_pnj = pnj_state;
         this.m_pv = pv;
         this.m_collider = collider;
+    }
+
+    //METHODS
+    public void TakeDamages(int dmg)
+    {
+        this.m_pv -= dmg;
+        if (this.m_pv <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
