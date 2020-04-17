@@ -6,7 +6,7 @@ public  class Career : MonoBehaviour
 {
     //PARAMETERS
     protected string m_career_name;
-    protected int m_strength;
+    public int m_strength;
 
     //METHODS
     public virtual void Attack(Character target)

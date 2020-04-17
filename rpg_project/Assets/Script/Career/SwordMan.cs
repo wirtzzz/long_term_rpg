@@ -15,7 +15,6 @@ public class SwordMan : Career
     }
     public void ActivateBox(Character.Dir collider_dir, bool is_active)
     {
-        Debug.Log("deutschland uber alles");
         switch (collider_dir)
         {
             case Character.Dir.back:

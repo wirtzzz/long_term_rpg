@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class sprite_controller : MonoBehaviour
 {
+    public int loc_strength;
     public SwordMan attacker;
     public enum State
     {
@@ -28,6 +29,8 @@ public class sprite_controller : MonoBehaviour
     {
         cur_position = player.transform.position;
         StartCoroutine(WaitForPlayer());
+        attacker.m_strength = loc_strength;
+        attacker.ActivateBox(Character.Dir.no_dir, false);
     }
     void Update()
     {
@@ -80,11 +83,11 @@ public class sprite_controller : MonoBehaviour
             foreach (RaycastHit2D hit in hits)
             {
                 Debug.Log(hit.collider.gameObject.name);
+                cur_state = State.attack;
                 MoveToPlayer();
             }
             yield return null;
         }
-        MoveToPlayer();
     }
     IEnumerator MoveTo()
     {
@@ -100,6 +103,7 @@ public class sprite_controller : MonoBehaviour
                     enemy_an.ResetTrigger(current_trig);
                     enemy_an.SetTrigger("back_walk");
                     current_trig = "back_walk";
+                    enemy_prototype.m_character_orientation = Character.Dir.back;
                 }
                 else
                 {
@@ -107,6 +111,7 @@ public class sprite_controller : MonoBehaviour
                     enemy_an.ResetTrigger(current_trig);
                     enemy_an.SetTrigger("front_walk");
                     current_trig = "front_walk";
+                    enemy_prototype.m_character_orientation = Character.Dir.front;
                 }
             }
             else
@@ -117,6 +122,7 @@ public class sprite_controller : MonoBehaviour
                     enemy_an.ResetTrigger(current_trig);
                     enemy_an.SetTrigger("right_walk");
                     current_trig = "right_walk";
+                    enemy_prototype.m_character_orientation = Character.Dir.right;
                 }
                 else
                 {
@@ -124,18 +130,36 @@ public class sprite_controller : MonoBehaviour
                     enemy_an.ResetTrigger(current_trig);
                     enemy_an.SetTrigger("left_walk");
                     current_trig = "left_walk";
+                    enemy_prototype.m_character_orientation = Character.Dir.left;
                 }
             }
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position-dist, step);
             yield return 0;
         }
+        enemy_an.ResetTrigger(current_trig);
+        enemy_an.SetTrigger("to_idle");
+        current_trig = "to_idle";
+        AttackPlayer(enemy_prototype.m_character_orientation);
+        cur_state = State.waiting;
+        Debug.Log("arrivé");
     }
-    private new void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("weapon"))
         {
             enemy_prototype.TakeDamages(10);
             Debug.Log(enemy_prototype.m_pv);
         }
+    }
+    private void AttackPlayer(Character.Dir dir)
+    {
+        attacker.ActivateBox(dir, true);
+        Debug.Log(dir);
+    }
+    private IEnumerator wait_hitbox(Character.Dir collider_dir)
+    {
+        yield return new WaitForFixedUpdate();
+        attacker.ActivateBox(collider_dir, false);
+        cur_state = State.waiting;
     }
 }

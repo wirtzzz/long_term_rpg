@@ -86,4 +86,11 @@ public class CharacterController : Career
         player_atck.ActivateBox(collider_dir, false);
         on_attack = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("weapon"))
+        {
+            player_char.TakeDamages(10);
+        }
+    }
 }
