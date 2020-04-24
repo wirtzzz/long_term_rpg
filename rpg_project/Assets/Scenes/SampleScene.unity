@@ -530,10 +530,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1079107645}
   - component: {fileID: 1079107650}
+  - component: {fileID: 1079107646}
   - component: {fileID: 1079107649}
   - component: {fileID: 1079107648}
   - component: {fileID: 1079107647}
-  - component: {fileID: 1079107646}
   m_Layer: 0
   m_Name: sprite_weapon
   m_TagString: weapon
@@ -672,8 +672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_strength: 0
-  front_swdman: {fileID: 1079107647}
-  back_swdman: {fileID: 1079107646}
+  front_swdman: {fileID: 1079107646}
+  back_swdman: {fileID: 1079107647}
   left_swdman: {fileID: 1079107649}
   right_swdman: {fileID: 1079107648}
 --- !u!1 &1338780947
@@ -937,7 +937,7 @@ MonoBehaviour:
   enemy_prototype: {fileID: 1549974472}
   enemy_an: {fileID: 1549974473}
   current_trig: to_idle
-  speed: 55
+  speed: 25
   moving_towards: 0
   dist_value: 0.55
   player: {fileID: 144663584}

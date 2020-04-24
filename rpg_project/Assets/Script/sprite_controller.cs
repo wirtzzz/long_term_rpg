@@ -12,6 +12,7 @@ public class sprite_controller : MonoBehaviour
         attack
     }
     public State cur_state;
+    bool on_co_wa = true;
     public Character enemy_prototype;
     public Animator enemy_an;
     public string current_trig="to_idle";
@@ -38,7 +39,18 @@ public class sprite_controller : MonoBehaviour
         cur_position = player.transform.position;
         //        this.transform.position = player.transform.position;
         //TeleportToPlayerZone();
-
+        switch (this.cur_state)
+        {
+            case State.waiting:
+                if (!on_co_wa)
+                    StartCoroutine(WaitForPlayer());
+                break;
+            case State.attack:
+                    AttackPlayer(this.enemy_prototype.m_character_orientation);
+                break;
+            default:
+                break;
+        }
     }
 
     public void TeleportToPlayerZone()
@@ -77,23 +89,26 @@ public class sprite_controller : MonoBehaviour
     }
     IEnumerator WaitForPlayer()
     {
+        on_co_wa = true;
         while (cur_state==State.waiting)
         {
             RaycastHit2D[] hits = Physics2D.CircleCastAll(this.transform.position, 1f, this.transform.right, radius, LayerMask.GetMask("Player"));
             foreach (RaycastHit2D hit in hits)
             {
                 Debug.Log(hit.collider.gameObject.name);
-                cur_state = State.attack;
                 MoveToPlayer();
+                Debug.Log("qqch détecté");
             }
             yield return null;
         }
+        Debug.Log("is waiting");
+        on_co_wa = false;
     }
     IEnumerator MoveTo()
     {
         float step = speed / 1500;
         Vector3 dist=new Vector3(0.0f,0.0f,0.0f);
-        while (transform.position != player.transform.position-dist)
+        while (transform.position != player.transform.position-dist && player.GetComponent<Character>().m_pv >= 0)
         {
             if (Mathf.Abs(player.transform.position.x - this.transform.position.x) < Mathf.Abs(player.transform.position.y - this.transform.position.y))
             {
@@ -139,8 +154,7 @@ public class sprite_controller : MonoBehaviour
         enemy_an.ResetTrigger(current_trig);
         enemy_an.SetTrigger("to_idle");
         current_trig = "to_idle";
-        AttackPlayer(enemy_prototype.m_character_orientation);
-        cur_state = State.waiting;
+        cur_state = State.attack;
         Debug.Log("arrivé");
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -154,12 +168,39 @@ public class sprite_controller : MonoBehaviour
     private void AttackPlayer(Character.Dir dir)
     {
         attacker.ActivateBox(dir, true);
-        Debug.Log(dir);
+        StartCoroutine(wait_hitbox(dir));
     }
     private IEnumerator wait_hitbox(Character.Dir collider_dir)
     {
         yield return new WaitForFixedUpdate();
+        Debug.Log(collider_dir);
         attacker.ActivateBox(collider_dir, false);
         cur_state = State.waiting;
+    }
+    public void CharacterAnimationEnd(string info)
+    {
+        StartCoroutine(wait_hitbox(GetDirFromString(info)));
+    }
+    private Character.Dir GetDirFromString(string dir) {
+        Character.Dir temp = Character.Dir.no_dir;
+        switch (dir)
+        {
+            case "left":
+                temp = Character.Dir.left;
+                break;
+            case "right":
+                temp = Character.Dir.right;
+                break;
+            case "front":
+                temp = Character.Dir.front;
+                break;
+            case "back":
+                temp = Character.Dir.back;
+                break;
+            default:
+                Debug.LogError("Ah");
+                break;
+        }
+        return temp;
     }
 }
