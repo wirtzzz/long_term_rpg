@@ -11,13 +11,19 @@ public class lvl_builder : MonoBehaviour
     public List<room_script> room_prefabs = new List<room_script>();
     public Vector2 i_r = new Vector2(5, 5);
     public float overlap;
-
     //PRIVATE ┬─┬ ノ( ゜-゜ノ)
     private room_script start_room;
     private LayerMask room_layer_mask;
     private end_room end_room;
     private List<room_script> placed_room = new List<room_script>();
     private List<doorway> available_doorway = new List<doorway>();
+
+    private void Start()
+    {
+        room_layer_mask = LayerMask.GetMask("room");
+        StartCoroutine("GenerateLevel");
+    }
+
     private void PlaceStartRoom(){
         GameObject temp_start_room = Instantiate(start_room_prefab).gameObject;
 
@@ -154,6 +160,7 @@ public class lvl_builder : MonoBehaviour
         yield return interval;
 
         int iteration = UnityEngine.Random.Range((int)i_r.x, (int)i_r.y);
+        Debug.Log("iteration "+ iteration);
         for (int i = 0; i < iteration; i++)
         {
             PlaceRoom();
