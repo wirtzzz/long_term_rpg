@@ -24,7 +24,8 @@ public class lvl_builder : MonoBehaviour
         StartCoroutine("GenerateLevel");
     }
 
-    private void PlaceStartRoom(){
+    private void PlaceStartRoom()
+    {
         GameObject temp_start_room = Instantiate(start_room_prefab).gameObject;
 
         start_room = temp_start_room.GetComponent<room_script>();
@@ -36,8 +37,58 @@ public class lvl_builder : MonoBehaviour
         start_room.transform.position = Vector3.zero;
         placed_room.Add(start_room);
     }
-    private void PlaceRoom(){
+    private void PlaceRoom()
+    {
         room_script cur_room = Instantiate(room_prefabs[UnityEngine.Random.Range(0, room_prefabs.Count)]);
+
+        cur_room.transform.parent = this.transform;
+
+        List<doorway> all_available_doorways = new List<doorway>(available_doorway);
+        List<doorway> cur_room_doorway = new List<doorway>();
+        AddDoorwaysToList(cur_room, ref cur_room_doorway);
+
+        AddDoorwaysToList(cur_room, ref available_doorway);
+
+        bool room_placed = false;
+
+        int doorway_counter = 0;
+
+        foreach (doorway cur_available_doorway in all_available_doorways)
+        {
+            foreach (doorway cur_doorway in cur_room_doorway)
+            {
+                PositionRoomAtDoorway(ref cur_room, cur_doorway, cur_available_doorway);
+                if (CheckRoomOverlap(cur_room))
+                {
+                    doorway_counter++;
+                    continue;
+                }
+                room_placed = true;
+                placed_room.Add(cur_room);
+
+                cur_doorway.gameObject.SetActive(false);
+                available_doorway.Remove(cur_doorway);
+
+                cur_available_doorway.gameObject.SetActive(false);
+                available_doorway.Remove(cur_available_doorway);
+
+                break;
+            }
+            if (room_placed)
+            {
+                break;
+            }
+            else
+            {
+                Destroy(cur_room.gameObject);
+                ResetLevelGenerator();
+                break;
+            }
+        }
+    }
+    private void PlaceRoom(bool end_room)
+    {
+        room_script cur_room = Instantiate(end_room_prefab);
 
         cur_room.transform.parent = this.transform;
 
@@ -134,7 +185,7 @@ public class lvl_builder : MonoBehaviour
         bounds.Expand(overlap);
 
         Collider[] colliders = Physics.OverlapBox(bounds.center, bounds.size / 2, rs.transform.rotation, room_layer_mask);
-        if(colliders.Length > 0)
+        if (colliders.Length > 0)
         {
             foreach (Collider c in colliders)
             {
@@ -160,11 +211,13 @@ public class lvl_builder : MonoBehaviour
         yield return interval;
 
         int iteration = UnityEngine.Random.Range((int)i_r.x, (int)i_r.y);
-        Debug.Log("iteration "+ iteration);
+        Debug.Log("iteration " + iteration);
         for (int i = 0; i < iteration; i++)
         {
             PlaceRoom();
             yield return new WaitForSeconds(0.01f);
         }
+        PlaceRoom(true);
+        yield return interval;
     }
 }
