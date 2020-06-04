@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class room_script : MonoBehaviour
 {
+    public GameObject player_start_position;
     public doorway[] doorWays;
     public MeshCollider mesh_collider;
     public enum RoomType{

@@ -11,6 +11,8 @@ public class lvl_builder : MonoBehaviour
     public List<room_script> room_prefabs = new List<room_script>();
     public Vector2 i_r = new Vector2(5, 5);
     public float overlap;
+    public GameObject player;
+    public Camera m_camera;
     //PRIVATE ┬─┬ ノ( ゜-゜ノ)
     private room_script start_room;
     private LayerMask room_layer_mask;
@@ -36,6 +38,12 @@ public class lvl_builder : MonoBehaviour
         start_room.transform.rotation = Quaternion.identity;
         start_room.transform.position = Vector3.zero;
         placed_room.Add(start_room);
+
+        GameObject temp_player_object = Instantiate(player, start_room.player_start_position.transform.position, start_room.player_start_position.transform.rotation);
+        m_camera.gameObject.transform.parent = temp_player_object.transform;
+        m_camera.gameObject.transform.position = temp_player_object.transform.position;
+
+        m_camera.gameObject.transform.position = new Vector3(m_camera.gameObject.transform.position.x, 8f, m_camera.gameObject.transform.position.z);
     }
     private void PlaceRoom()
     {
