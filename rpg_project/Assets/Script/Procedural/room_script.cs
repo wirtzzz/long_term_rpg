@@ -9,7 +9,8 @@ public class room_script : MonoBehaviour
     public enum RoomType{
         start,
         end,
-        corridor
+        corridor,
+        arena
     };
     public RoomType m_room_type;
     public Bounds room_bounds {
