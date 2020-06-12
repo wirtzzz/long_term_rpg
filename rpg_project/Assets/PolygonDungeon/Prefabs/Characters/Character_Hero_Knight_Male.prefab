@@ -1737,6 +1737,7 @@ MonoBehaviour:
   speed: 6
   m_camera: {fileID: 0}
   rotation_speed: 4
+  m_animator: {fileID: 9566420}
 --- !u!143 &8568646807197146768
 CharacterController:
   m_ObjectHideFlags: 0

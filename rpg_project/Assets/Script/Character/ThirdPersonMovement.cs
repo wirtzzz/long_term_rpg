@@ -8,6 +8,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
     public Camera m_camera;
     public float rotation_speed = 4f;
+    public Animator m_animator;
 
     private Vector3 m_mouse_position;
     void Update()
@@ -29,7 +30,15 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (dir.magnitude >= 0.1f)
         {
+            m_animator.SetBool("run", true);
             m_controller.Move(dir * speed * Time.deltaTime);
+        }
+        else
+            m_animator.SetBool("run", false);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            m_animator.SetTrigger("attack");
         }
     }
 }
