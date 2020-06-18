@@ -12,6 +12,7 @@ public class lvl_builder : MonoBehaviour
     public Vector2 i_r = new Vector2(5, 5);
     public float overlap;
     public GameObject player;
+    public GameObject enemy;
     public Camera m_camera;
     //PRIVATE ┬─┬ ノ( ゜-゜ノ)
     private room_script start_room;
@@ -98,6 +99,8 @@ public class lvl_builder : MonoBehaviour
         room_script cur_room = Instantiate(end_room_prefab);
 
         cur_room.transform.parent = this.transform;
+
+        GameObject temp_enemy = Instantiate(enemy, cur_room.enemy_spawner.transform.position, cur_room.enemy_spawner.transform.rotation);
 
         List<doorway> all_available_doorways = new List<doorway>(available_doorway);
         List<doorway> cur_room_doorway = new List<doorway>();
