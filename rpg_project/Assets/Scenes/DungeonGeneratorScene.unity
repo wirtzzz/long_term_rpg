@@ -777,7 +777,7 @@ MonoBehaviour:
   i_r: {x: 10, y: 10}
   overlap: 0
   player: {fileID: 162860, guid: 880858dfd9b1e784e89d45242bf78d2b, type: 3}
-  enemy: {fileID: 0}
+  enemy: {fileID: 173802, guid: 388fa61abd880a549864058f895c8045, type: 3}
   m_camera: {fileID: 295630681}
 --- !u!4 &1990769843
 Transform:

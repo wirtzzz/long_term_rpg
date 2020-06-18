@@ -100,7 +100,6 @@ public class lvl_builder : MonoBehaviour
 
         cur_room.transform.parent = this.transform;
 
-        GameObject temp_enemy = Instantiate(enemy, cur_room.enemy_spawner.transform.position, cur_room.enemy_spawner.transform.rotation);
 
         List<doorway> all_available_doorways = new List<doorway>(available_doorway);
         List<doorway> cur_room_doorway = new List<doorway>();
@@ -135,6 +134,7 @@ public class lvl_builder : MonoBehaviour
             }
             if (room_placed)
             {
+                GameObject temp_enemy = Instantiate(enemy, cur_room.enemy_spawner.transform.position, cur_room.enemy_spawner.transform.rotation);
                 break;
             }
             else
