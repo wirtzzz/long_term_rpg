@@ -15,13 +15,13 @@ public class SwordMan : Career
     }
     public void ActivateBox(Character.Dir collider_dir, bool is_active)
     {
-        Debug.Log("deutschland uber alles");
         switch (collider_dir)
         {
             case Character.Dir.back:
                 back_swdman.enabled = is_active;
                 break;
             case Character.Dir.front:
+                Debug.Log("lol");
                 front_swdman.enabled = is_active;
                 break;
             case Character.Dir.right:
@@ -39,5 +39,12 @@ public class SwordMan : Career
             default:
                 break;
         }
+        StartCoroutine(wait_hitbox(collider_dir));
+    }
+
+    private IEnumerator wait_hitbox(Character.Dir collider_dir)
+    {
+        yield return new WaitForFixedUpdate();
+        ActivateBox(collider_dir, false);
     }
 }

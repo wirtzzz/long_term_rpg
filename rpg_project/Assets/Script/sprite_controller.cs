@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class sprite_controller : MonoBehaviour
 {
+    //PUBLIC
+
     public SwordMan attacker;
     public enum State
     {
@@ -13,21 +15,23 @@ public class sprite_controller : MonoBehaviour
     public State cur_state;
     public Character enemy_prototype;
     public Animator enemy_an;
-    public string current_trig="to_idle";
+    public string current_trig = "to_idle";
+    public float radius;
     public float speed;
     public bool moving_towards = false;
-    private Vector3 last_position;
     public float dist_value;
-    private Vector3 cur_position;
     public GameObject player;
+    //PRIVATE
+    private Vector3 last_position;
     private Vector3 target_position;
     private Vector3 move = new Vector3();
-    public float radius;
-    // Update is called once per frame
+    private Vector3 cur_position;
+    private Character.Dir cur_direction;
+    //UNITY METHODS
     private void Start()
     {
         cur_position = player.transform.position;
-        StartCoroutine(WaitForPlayer());
+        //StartCoroutine(WaitForPlayer());
     }
     void Update()
     {
@@ -37,7 +41,7 @@ public class sprite_controller : MonoBehaviour
         //TeleportToPlayerZone();
 
     }
-
+    //METHODS
     public void TeleportToPlayerZone()
     {
         move.x = cur_position.x * 50 - last_position.x * 50;
@@ -74,12 +78,12 @@ public class sprite_controller : MonoBehaviour
     }
     IEnumerator WaitForPlayer()
     {
-        while (cur_state==State.waiting)
+        while (cur_state == State.waiting)
+
         {
             RaycastHit2D[] hits = Physics2D.CircleCastAll(this.transform.position, 1f, this.transform.right, radius, LayerMask.GetMask("Player"));
             foreach (RaycastHit2D hit in hits)
             {
-                Debug.Log(hit.collider.gameObject.name);
                 MoveToPlayer();
             }
             yield return null;
@@ -89,8 +93,9 @@ public class sprite_controller : MonoBehaviour
     IEnumerator MoveTo()
     {
         float step = speed / 1500;
-        Vector3 dist=new Vector3(0.0f,0.0f,0.0f);
-        while (transform.position != player.transform.position-dist)
+        Vector3 dist = new Vector3(0.0f, 0.0f, 0.0f);
+        while (transform.position != player.transform.position - dist)
+
         {
             if (Mathf.Abs(player.transform.position.x - this.transform.position.x) < Mathf.Abs(player.transform.position.y - this.transform.position.y))
             {
@@ -100,6 +105,11 @@ public class sprite_controller : MonoBehaviour
                     enemy_an.ResetTrigger(current_trig);
                     enemy_an.SetTrigger("back_walk");
                     current_trig = "back_walk";
+
+                    //enemy_prototype.m_character_orientation = Character.Dir.back;
+
+                    //cur_direction = Character.Dir.back;
+
                 }
                 else
                 {
@@ -107,6 +117,11 @@ public class sprite_controller : MonoBehaviour
                     enemy_an.ResetTrigger(current_trig);
                     enemy_an.SetTrigger("front_walk");
                     current_trig = "front_walk";
+
+                    //enemy_prototype.m_character_orientation = Character.Dir.front;
+
+                    //cur_direction = Character.Dir.front;
+
                 }
             }
             else
@@ -117,6 +132,9 @@ public class sprite_controller : MonoBehaviour
                     enemy_an.ResetTrigger(current_trig);
                     enemy_an.SetTrigger("right_walk");
                     current_trig = "right_walk";
+
+                    //cur_direction = Character.Dir.right;
+
                 }
                 else
                 {
@@ -124,18 +142,107 @@ public class sprite_controller : MonoBehaviour
                     enemy_an.ResetTrigger(current_trig);
                     enemy_an.SetTrigger("left_walk");
                     current_trig = "left_walk";
+
+                    //cur_direction = Character.Dir.left;
+
                 }
             }
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position-dist, step);
-            yield return 0;
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position - dist, step);
+            yield return null;
+        }
+        cur_state = State.attack;
+        Attack();
+    }
+
+    private void Attack()
+    {
+        if (cur_state == State.attack)
+        {
+            enemy_an.ResetTrigger(current_trig);
+            switch (cur_direction)
+            {
+                case Character.Dir.back:
+                    enemy_an.SetTrigger("atck_to_back");
+                    break;
+                case Character.Dir.front:
+                    enemy_an.SetTrigger("atck_to_front");
+                    break;
+                case Character.Dir.right:
+                    enemy_an.SetTrigger("atck_to_right");
+                    break;
+                case Character.Dir.left:
+                    enemy_an.SetTrigger("atck_to_left");
+                    break;
+                default:
+                    break;
+            }
+            cur_state = State.waiting;
+            WaitForPlayer();
+        }
+        else
+        {
+            Debug.LogError("Not in attack mode");
         }
     }
-    private new void OnTriggerEnter2D(Collider2D collision)
+
+    //<<<<<<< Updated upstream
+    //=======
+    //    private void AttackPlayer(Character.Dir dir)
+    //    {
+    //        attacker.ActivateBox(dir, true);
+    //        StartCoroutine(wait_hitbox(dir));
+    //    }
+    //    private IEnumerator wait_hitbox(Character.Dir collider_dir)
+    //    {
+    //        yield return new WaitForFixedUpdate();
+    //        Debug.Log(collider_dir);
+    //        attacker.ActivateBox(collider_dir, false);
+    //        cur_state = State.waiting;
+    //    }
+    //    public void CharacterAnimationEnd(string info)
+    //    {
+    //        StartCoroutine(wait_hitbox(GetDirFromString(info)));
+    //    }
+    //    private Character.Dir GetDirFromString(string dir) {
+    //        Character.Dir temp = Character.Dir.no_dir;
+    //        switch (dir)
+    //        {
+    //            case "left":
+    //                temp = Character.Dir.left;
+    //                break;
+    //            case "right":
+    //                temp = Character.Dir.right;
+    //                break;
+    //            case "front":
+    //                temp = Character.Dir.front;
+    //                break;
+    //            case "back":
+    //                temp = Character.Dir.back;
+    //                break;
+    //            default:
+    //                Debug.LogError("Ah");
+    //                break;
+    //        }
+    //        return temp;
+    //    }
+
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        enemy_prototype.TakeDamages(10);
+    //        Debug.Log(enemy_prototype.m_pv);
+    //    }
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("weapon"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             enemy_prototype.TakeDamages(10);
             Debug.Log(enemy_prototype.m_pv);
         }
     }
+
 }
