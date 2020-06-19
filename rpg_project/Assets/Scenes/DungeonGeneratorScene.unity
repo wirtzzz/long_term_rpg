@@ -266,6 +266,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1686856583051127575, guid: 8af92a0655c0c364a91f33fbdf09791d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.04
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af92a0655c0c364a91f33fbdf09791d, type: 3}
 --- !u!4 &6811999 stripped
@@ -391,6 +396,7 @@ MonoBehaviour:
   tgt: {fileID: 0}
   smooth_speed: 0.125
   offset: {x: 0, y: 8, z: 0}
+  camera_set: 0
 --- !u!1001 &638825627
 PrefabInstance:
   m_ObjectHideFlags: 0

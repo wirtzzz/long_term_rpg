@@ -3369,6 +3369,7 @@ GameObject:
   - component: {fileID: 497534}
   - component: {fileID: 9508676}
   - component: {fileID: 7101419803560287585}
+  - component: {fileID: -1091849859777648379}
   m_Layer: 0
   m_Name: Character_Goblin_WarChief
   m_TagString: Untagged
@@ -3436,7 +3437,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.35
-  m_Speed: 3.5
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -3448,6 +3449,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-1091849859777648379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa46ac263ecac1438a08fe307d1119c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_nav_mesh_agent: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &174376
 GameObject:
   m_ObjectHideFlags: 0

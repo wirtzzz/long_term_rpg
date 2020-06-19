@@ -24,6 +24,8 @@ public class lvl_builder : MonoBehaviour
     private List<room_script> placed_room = new List<room_script>();
     private List<doorway> available_doorway = new List<doorway>();
     private GameObject final_player;
+    //End Room
+    private Transform Ennemy_spawner;
 
     private void Start()
     {
@@ -140,8 +142,8 @@ public class lvl_builder : MonoBehaviour
             }
             if (room_placed)
             {
-                GameObject temp_enemy = Instantiate(enemy, cur_room.enemy_spawner.transform.position, cur_room.enemy_spawner.transform.rotation);
-                temp_enemy.GetComponent<enemy_controller>().player = final_player;
+               
+                Ennemy_spawner = cur_room.enemy_spawner.transform;
                 break;
             }
             else
@@ -238,5 +240,8 @@ public class lvl_builder : MonoBehaviour
         yield return interval;
 
         m_surface.BuildNavMesh();
+        GameObject temp_enemy = Instantiate(enemy, Ennemy_spawner.position, Ennemy_spawner.rotation);
+        Debug.Log("Player : " + final_player.name);
+        temp_enemy.GetComponent<enemy_controller>().player = final_player;
     }
 }
