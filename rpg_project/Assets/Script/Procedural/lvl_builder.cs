@@ -23,6 +23,7 @@ public class lvl_builder : MonoBehaviour
     private end_room end_room;
     private List<room_script> placed_room = new List<room_script>();
     private List<doorway> available_doorway = new List<doorway>();
+    private GameObject final_player;
 
     private void Start()
     {
@@ -47,6 +48,8 @@ public class lvl_builder : MonoBehaviour
         m_camera.gameObject.transform.position = temp_player_object.transform.position;
         m_camera.GetComponent<camera_follow>().tgt = temp_player_object.transform;
         temp_player_object.GetComponent<ThirdPersonMovement>().m_camera = this.m_camera;
+        m_camera.GetComponent<camera_follow>().camera_set = true;
+        final_player = temp_player_object;
     }
     private void PlaceRoom()
     {
@@ -138,6 +141,7 @@ public class lvl_builder : MonoBehaviour
             if (room_placed)
             {
                 GameObject temp_enemy = Instantiate(enemy, cur_room.enemy_spawner.transform.position, cur_room.enemy_spawner.transform.rotation);
+                temp_enemy.GetComponent<enemy_controller>().player = final_player;
                 break;
             }
             else

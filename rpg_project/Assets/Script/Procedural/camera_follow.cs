@@ -7,9 +7,11 @@ public class camera_follow : MonoBehaviour
     public Transform tgt;
     public float smooth_speed = 0.125f;
     public Vector3 offset;
+    public bool camera_set = false;
 
     private void LateUpdate()
     {
-        transform.position = tgt.position + offset;
+        if (camera_set)
+            transform.position = tgt.position + offset;
     }
 }
