@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Unity.Mathematics;
+using UnityEngine.AI;
 
 public class lvl_builder : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class lvl_builder : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public Camera m_camera;
+    public NavMeshSurface m_surface;
+
     //PRIVATE ┬─┬ ノ( ゜-゜ノ)
     private room_script start_room;
     private LayerMask room_layer_mask;
@@ -229,5 +232,7 @@ public class lvl_builder : MonoBehaviour
         }
         PlaceRoom(true);
         yield return interval;
+
+        m_surface.BuildNavMesh();
     }
 }
