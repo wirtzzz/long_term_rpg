@@ -9,7 +9,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public Camera m_camera;
     public float rotation_speed = 4f;
     public Animator m_animator;
-
+    public Character m_character;
     private Vector3 m_mouse_position;
     void Update()
     {

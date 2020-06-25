@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
     private Race m_race;
     public int m_pv;
     public int m_resistance;
-    private Career m_career;
+    public Career m_career;
     private BoxCollider2D m_collider;
     public enum Dir
     {

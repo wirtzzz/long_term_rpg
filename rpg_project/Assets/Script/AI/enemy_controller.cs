@@ -8,7 +8,7 @@ public class enemy_controller : MonoBehaviour
     public NavMeshAgent m_nav_mesh_agent;
     public GameObject player;
     public Animator m_animator;
-
+    public Character enemy_character;
     private void Start()
     {
         m_nav_mesh_agent = this.GetComponent<NavMeshAgent>();
@@ -21,7 +21,8 @@ public class enemy_controller : MonoBehaviour
         }
         else
         {
-            m_animator.SetBool("run", false);
+            enemy_character.m_career.Attack(player.GetComponent<Character>());
+            m_animator.SetTrigger("attack");
         }
         
     }
