@@ -3480,12 +3480,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sprite: {fileID: 0}
-  m_character_name: 
-  m_pv: 0
+  m_character_name: enemy
+  m_pv: 100
   m_resistance: 0
   m_career: {fileID: 3478022416044578000}
   m_character_orientation: 0
-  m_side: 0
+  m_side: 2
   is_pnj: 0
 --- !u!114 &3478022416044578000
 MonoBehaviour:
@@ -3499,6 +3499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc733d4bbcc1714fb79f72489bc27cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_strength: 10
 --- !u!1 &174376
 GameObject:
   m_ObjectHideFlags: 0
