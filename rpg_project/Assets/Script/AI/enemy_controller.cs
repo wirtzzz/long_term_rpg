@@ -16,14 +16,16 @@ public class enemy_controller : MonoBehaviour
     private void Update()
     {
         m_nav_mesh_agent.destination = player.transform.position;
-        if(m_nav_mesh_agent.velocity != Vector3.zero){
+        if (m_nav_mesh_agent.velocity != Vector3.zero)
+        {
             m_animator.SetBool("run", true);
         }
         else
         {
+            m_animator.SetBool("run", false);
             enemy_character.m_career.Attack(player.GetComponent<Character>());
             m_animator.SetTrigger("attack");
         }
-        
+        enemy_character.transform.rotation = Quaternion.Inverse(Quaternion.LookRotation(player.transform.position));
     }
 }
