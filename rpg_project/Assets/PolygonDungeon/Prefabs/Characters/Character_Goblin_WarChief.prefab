@@ -3371,6 +3371,7 @@ GameObject:
   - component: {fileID: 7101419803560287585}
   - component: {fileID: -1091849859777648379}
   - component: {fileID: 3535980707815353197}
+  - component: {fileID: 3478022416044578000}
   m_Layer: 0
   m_Name: Character_Goblin_WarChief
   m_TagString: Untagged
@@ -3465,7 +3466,7 @@ MonoBehaviour:
   m_nav_mesh_agent: {fileID: 0}
   player: {fileID: 0}
   m_animator: {fileID: 9508676}
-  enemy_character: {fileID: 0}
+  enemy_character: {fileID: 3535980707815353197}
 --- !u!114 &3535980707815353197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3482,10 +3483,22 @@ MonoBehaviour:
   m_character_name: 
   m_pv: 0
   m_resistance: 0
-  m_career: {fileID: 0}
+  m_career: {fileID: 3478022416044578000}
   m_character_orientation: 0
   m_side: 0
   is_pnj: 0
+--- !u!114 &3478022416044578000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc733d4bbcc1714fb79f72489bc27cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &174376
 GameObject:
   m_ObjectHideFlags: 0
