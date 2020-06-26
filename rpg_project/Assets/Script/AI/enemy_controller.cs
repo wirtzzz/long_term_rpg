@@ -23,9 +23,17 @@ public class enemy_controller : MonoBehaviour
         else
         {
             m_animator.SetBool("run", false);
-            enemy_character.m_career.Attack(player.GetComponent<Character>());
             m_animator.SetTrigger("attack");
+            //player.GetComponent<Character>().TakeDamages(enemy_character.m_career.m_strength);
         }
         enemy_character.transform.rotation = Quaternion.Inverse(Quaternion.LookRotation(player.transform.position));
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player " + hit.gameObject.name);
+        }
     }
 }

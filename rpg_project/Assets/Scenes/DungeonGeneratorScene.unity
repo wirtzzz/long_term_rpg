@@ -1129,7 +1129,7 @@ MonoBehaviour:
   room_prefabs:
   - {fileID: 638825630}
   - {fileID: 1346106483}
-  i_r: {x: 10, y: 10}
+  i_r: {x: 3, y: 3}
   overlap: 0
   player: {fileID: 162860, guid: 880858dfd9b1e784e89d45242bf78d2b, type: 3}
   enemy: {fileID: 173802, guid: 388fa61abd880a549864058f895c8045, type: 3}

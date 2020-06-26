@@ -21,11 +21,11 @@ public class ThirdPersonMovement : MonoBehaviour
         Ray r = m_camera.ScreenPointToRay(Input.mousePosition);
 
         float hit_distance = 0.0f;
-        if(player_plane.Raycast(r, out hit_distance))
+        if (player_plane.Raycast(r, out hit_distance))
         {
             Vector3 target_point = r.GetPoint(hit_distance);
-            Quaternion target_rotation = Quaternion.LookRotation(target_point-transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, target_rotation, rotation_speed*Time.deltaTime);
+            Quaternion target_rotation = Quaternion.LookRotation(target_point - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, target_rotation, rotation_speed * Time.deltaTime);
         }
 
         if (dir.magnitude >= 0.1f)
@@ -39,6 +39,14 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             m_animator.SetTrigger("attack");
+        }
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Ennemy"))
+        {
+            Debug.Log("Enemmy " +hit.gameObject.name);
         }
     }
 }
