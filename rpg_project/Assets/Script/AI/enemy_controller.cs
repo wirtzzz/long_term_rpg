@@ -26,7 +26,7 @@ public class enemy_controller : MonoBehaviour
             m_animator.SetTrigger("attack");
             //player.GetComponent<Character>().TakeDamages(enemy_character.m_career.m_strength);
         }
-        enemy_character.transform.rotation = Quaternion.Inverse(Quaternion.LookRotation(player.transform.position));
+        enemy_character.transform.rotation = Quaternion.LookRotation(player.transform.position);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
