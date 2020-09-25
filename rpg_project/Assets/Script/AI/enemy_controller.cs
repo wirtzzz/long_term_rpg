@@ -26,14 +26,19 @@ public class enemy_controller : MonoBehaviour
             m_animator.SetTrigger("attack");
             //player.GetComponent<Character>().TakeDamages(enemy_character.m_career.m_strength);
         }
-        enemy_character.transform.rotation = Quaternion.LookRotation(player.transform.position);
+        //enemy_character.transform.rotation = Quaternion.LookRotation(player.transform.position);
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    //private void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    Debug.Log("oui");
+    //    if (hit.gameObject.CompareTag("Player"))
+    //    {
+    //        Debug.Log("Player " + hit.gameObject.name);
+    //    }
+    //}
+    private void OnCollisionEnter(Collision collision)
     {
-        if (hit.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Player " + hit.gameObject.name);
-        }
+        Debug.Log("pouet 2");
     }
 }

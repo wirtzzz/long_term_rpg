@@ -42,11 +42,15 @@ public class ThirdPersonMovement : MonoBehaviour
         }
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    //private void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    if (hit.gameObject.CompareTag("Ennemy"))
+    //    {
+    //        Debug.Log("Enemmy " +hit.gameObject.name);
+    //    }
+    //}
+    private void OnCollisionEnter(Collision collision)
     {
-        if (hit.gameObject.CompareTag("Ennemy"))
-        {
-            Debug.Log("Enemmy " +hit.gameObject.name);
-        }
+        Debug.Log("pouet 1");
     }
 }
