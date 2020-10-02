@@ -31,7 +31,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (dir.magnitude >= 0.1f)
         {
             m_animator.SetBool("run", true);
-            m_controller.Move(dir * speed * Time.deltaTime);
+            //m_controller.Move(dir * speed * Time.deltaTime);
         }
         else
             m_animator.SetBool("run", false);
