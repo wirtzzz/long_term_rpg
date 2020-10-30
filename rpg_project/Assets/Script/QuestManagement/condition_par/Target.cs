@@ -14,5 +14,4 @@ public class Target : MonoBehaviour
     {
         is_killed(target);
     }
-
 }

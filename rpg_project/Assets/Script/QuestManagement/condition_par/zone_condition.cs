@@ -8,9 +8,16 @@ public class zone_condition : MonoBehaviour
     public Vector3 destination_position;
     public float radius;
     private SphereCollider destination_zone;
-
-    public void BuildSphere()
+    private void OnEnable()
     {
-        destination_zone = support.AddComponent<SphereCollider>();
+        zone_reached.is_entered += ZoneReached;
+    }
+    private void OnDisable()
+    {
+        zone_reached.is_entered -= ZoneReached;
+    }
+    private void ZoneReached()
+    {
+        //next zone
     }
 }

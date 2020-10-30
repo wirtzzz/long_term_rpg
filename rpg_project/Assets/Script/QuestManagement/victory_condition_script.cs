@@ -15,17 +15,18 @@ public class victory_condition_script : MonoBehaviour
 
     public List<cond_type> quest_conditions;
 
+
     private void OnEnable()
     {
-        Target.is_killed += EnemyKilledEvent;
+        kill_condition.KillCondComplete += KillConditionComplete;
     }
     private void OnDisable()
     {
-        Target.is_killed -= EnemyKilledEvent;
+        kill_condition.KillCondComplete -= KillConditionComplete;
     }
-
-    private void EnemyKilledEvent(GameObject tgt_object)
+    private void KillConditionComplete()
     {
-        Debug.Log("enemy KILLED");
+        //voila
+        Debug.Log("you killed all the enemies!");
     }
 }
