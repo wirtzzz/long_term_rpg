@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class zone_reached : MonoBehaviour
+public class zone : MonoBehaviour
 {
     private SphereCollider collider_box;
     private GameObject player;
     public delegate void ZoneEntered();
     public static event ZoneEntered is_entered;
-    public zone_reached(Vector3 position, float m_radius, GameObject player)
+    public zone(Vector3 position, float m_radius, GameObject player)
     {
         this.collider_box = this.gameObject.AddComponent<SphereCollider>();
         collider_box.center = position;

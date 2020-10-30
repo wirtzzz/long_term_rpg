@@ -19,6 +19,7 @@ public class victory_condition_script : MonoBehaviour
     private void OnEnable()
     {
         kill_condition.KillCondComplete += KillConditionComplete;
+        zone_condition.ZoneCondComplete +=  
     }
     private void OnDisable()
     {
@@ -28,5 +29,9 @@ public class victory_condition_script : MonoBehaviour
     {
         //voila
         Debug.Log("you killed all the enemies!");
+    }
+    private void ZoneConditionComplete()
+    {
+
     }
 }
