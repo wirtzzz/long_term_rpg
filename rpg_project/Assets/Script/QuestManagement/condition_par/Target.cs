@@ -5,13 +5,18 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public GameObject target;
-    public int kill_number, cur_kill;
     public delegate void tgt_killed(GameObject tgt_object);
     public static event tgt_killed is_killed;
+    public int number_to_kill;
+    private int killed = 0;
     //to do : créer event calls
 
     private void OnEnemyKilled()
     {
-        is_killed(target);
+        if (killed <= number_to_kill)
+        {
+            killed++;
+            is_killed(target);
+        }
     }
 }

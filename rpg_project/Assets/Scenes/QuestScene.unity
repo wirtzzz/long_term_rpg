@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee03c3b4825c884fb4ea4fc1778e8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest_conditions: 
+  quest_conditions: 000000000100000000000000
 --- !u!1 &1579260484
 GameObject:
   m_ObjectHideFlags: 0
