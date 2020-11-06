@@ -17,7 +17,6 @@ public class collect_condition : MonoBehaviour
             obj_counter += item.obj_num;
         }
     }
-
     private void OnEnable()
     {
         Object.in_inventory += ObjectPicked;
@@ -32,5 +31,4 @@ public class collect_condition : MonoBehaviour
         if (pick_counter == obj_counter)
             CollectCondComplete();
     }
-
 }

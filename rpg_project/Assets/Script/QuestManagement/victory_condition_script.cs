@@ -35,10 +35,10 @@ public class victory_condition_script : MonoBehaviour
     }
     private void ZoneConditionComplete()
     {
-
+        Debug.Log("vous avez atteint la zone");
     }
     private void CollectConditionComplete()
     {
-
+        Debug.Log("vous avez récolté ce magnifique objet");
     }
 }
