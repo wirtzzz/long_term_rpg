@@ -6,26 +6,29 @@ using Ink.Runtime;
 
 public class ink_manager : MonoBehaviour
 {
+    public Font font;
+    public bool is_active = false;
     public Button button_prefab;
     public TextAsset ink_json_asset;
     private Story story;
-    void Start()
+    public void StartStory()
     {
-        story = new Story(ink_json_asset.text);
-        Refresh();
-    }
-
-    void Update()
-    {
-        
+        if (!is_active)
+        {
+            story = new Story(ink_json_asset.text);
+            Refresh();
+            is_active = true;
+        }
     }
     private string GetNextBlock()
     {
         string text = "";
-        if(story.canContinue)
+        if (story.canContinue)
         {
-            text = story.Continue();
+            text = story.ContinueMaximally();
         }
+        else
+            text = "";
         return text;
     }
     private void Refresh()
@@ -36,7 +39,7 @@ public class ink_manager : MonoBehaviour
         Text new_text_object = new_game_object.AddComponent<Text>();
         new_text_object.fontSize = 24;
         new_text_object.text = GetNextBlock();
-        //to do: font
+        new_text_object.font = font;
         foreach (Choice choice in story.currentChoices)
         {
             Button choice_button = Instantiate(button_prefab) as Button;

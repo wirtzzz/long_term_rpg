@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ink.Runtime;
 using UnityEngine.AI;
 
 public class npc_management : MonoBehaviour
@@ -10,6 +11,7 @@ public class npc_management : MonoBehaviour
         Movable,
         Static
     }
+    public TextAsset text_asset;
     public NPCBehaviour behaviour;
     public GameObject storypoints_parent;
     public Vector3 cur_destination;
@@ -62,5 +64,10 @@ public class npc_management : MonoBehaviour
         }
         cur_point.SetActive(false);
         NextStoryPoint();
+    }
+    private void OnMouseDown()
+    {
+        gameManager.instance.inkManager.ink_json_asset = text_asset;
+        gameManager.instance.inkManager.StartStory();
     }
 }
