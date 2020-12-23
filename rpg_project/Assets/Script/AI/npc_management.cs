@@ -24,9 +24,9 @@ public class npc_management : MonoBehaviour
     {
         outline_script = GetComponent<Outline>();
         outline_script.enabled = false;
-        if(behaviour == NPCBehaviour.Movable)
+        if (behaviour == NPCBehaviour.Movable)
         {
-            if(storypoints_parent != null)
+            if (storypoints_parent != null)
             {
                 destinations = storypoints_parent.GetComponentsInChildren<story_point>(true);
                 NextStoryPoint();
@@ -50,7 +50,8 @@ public class npc_management : MonoBehaviour
     }
     private void OnMouseOver()
     {
-        outline_script.enabled = true;
+        if (behaviour == NPCBehaviour.Static)
+            outline_script.enabled = true;
     }
     private void OnMouseExit()
     {
@@ -67,7 +68,10 @@ public class npc_management : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        gameManager.instance.inkManager.ink_json_asset = text_asset;
-        gameManager.instance.inkManager.StartStory();
+        if (behaviour == NPCBehaviour.Static)
+        {
+            gameManager.instance.inkManager.ink_json_asset = text_asset;
+            gameManager.instance.inkManager.StartStory();
+        }
     }
 }
