@@ -14,28 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkLibrary:
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 65c54765d327f954e97a0f83320d3a82, type: 3}
+    inkAsset: {fileID: 102900000, guid: 1460e815e969b43b8a83a7caa8b48c27, type: 3}
     jsonAssetDirectory: {fileID: 0}
-    jsonAsset: {fileID: 4900000, guid: 7d379fc67ef19b647aaea323cb321e21, type: 3}
+    jsonAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 0264577c40af94445b553032fa42d340, type: 3}
     jsonAssetDirectory: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: 93497d06078de404f8550e85622b1a95, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 542020a3362119c4a868d9aedc6486cb, type: 3}
-    jsonAssetDirectory: {fileID: 0}
-    jsonAsset: {fileID: 4900000, guid: 0f986b77f6d9b8444866e1d988834bfe, type: 3}
-  - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 821a888ecfad69145bd95e9d8ed9fcd6, type: 3}
     jsonAssetDirectory: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: e75da408c925688438c17b2a29462db0, type: 3}
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 542020a3362119c4a868d9aedc6486cb, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: 0f986b77f6d9b8444866e1d988834bfe, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 74f630969ad95624db00a2354992361d, type: 3}
     jsonAssetDirectory: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: 5f9594710411cd54a87ca048d058f0da, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 1460e815e969b43b8a83a7caa8b48c27, type: 3}
+    inkAsset: {fileID: 102900000, guid: 65c54765d327f954e97a0f83320d3a82, type: 3}
     jsonAssetDirectory: {fileID: 0}
-    jsonAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
+    jsonAsset: {fileID: 4900000, guid: 7d379fc67ef19b647aaea323cb321e21, type: 3}
   pendingCompilationStack: []
   compilationStack: []
