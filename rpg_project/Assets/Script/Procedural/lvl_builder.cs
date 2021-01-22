@@ -49,7 +49,7 @@ public class lvl_builder : MonoBehaviour
         GameObject temp_player_object = Instantiate(player, start_room.player_start_position.transform.position, start_room.player_start_position.transform.rotation);
         m_camera.gameObject.transform.position = temp_player_object.transform.position;
         m_camera.GetComponent<camera_follow>().tgt = temp_player_object.transform;
-        temp_player_object.GetComponent<ThirdPersonMovement>().m_camera = this.m_camera;
+
         m_camera.GetComponent<camera_follow>().camera_set = true;
         final_player = temp_player_object;
     }
