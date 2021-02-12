@@ -12,8 +12,19 @@ public class ThirdPersonMovement : MonoBehaviour
     public float turn_smooth_time = 0.1f;
     private float horizontal, vertical;
     private Vector3 direction;
+    private float gravity_value =2500f;
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     public void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 10f;
+        }
+        else
+            speed = 5f;
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -25,5 +36,11 @@ public class ThirdPersonMovement : MonoBehaviour
             Vector3 move_dir = Quaternion.Euler(0f, tgt_angle, 0f)*Vector3.forward;
             controller.Move(move_dir.normalized * speed * Time.deltaTime);
         }
+        direction.y -= gravity_value * Time.deltaTime;
+        controller.Move(direction * Time.deltaTime);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("kartoffel");
     }
 }
