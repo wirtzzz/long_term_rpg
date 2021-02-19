@@ -62,7 +62,6 @@ public class Thrower : MonoBehaviour
 
     private void ThrowObject()
     {
-
         Throwables[currentThrowable].SetActive(true);
         Throwables[currentThrowable].GetComponent<Rigidbody>().velocity = Vector3.zero;
         Throwables[currentThrowable].GetComponent<Rigidbody>().AddForce(this.transform.forward * 2f);
