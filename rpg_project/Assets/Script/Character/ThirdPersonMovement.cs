@@ -33,17 +33,23 @@ public class ThirdPersonMovement : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             float tgt_angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, tgt_angle, turn_smooth_velocity, turn_smooth_time);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, tgt_angle, ref turn_smooth_velocity, turn_smooth_time);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 move_dir = Quaternion.Euler(0f, tgt_angle, 0f) * Vector3.forward;
             controller.Move(move_dir.normalized * speed * Time.deltaTime);
-            m_animator.SetBool("walk", true);
+            m_animator.SetBool("run", true);
         }
         else
-            m_animator.SetBool("walk", false);
+            m_animator.SetBool("run", false);
         direction.y -= gravity_value * Time.deltaTime;
         controller.Move(direction * Time.deltaTime);
 
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            m_animator.SetTrigger("draw");
+            m_animator.SetTrigger("attack");
+            m_animator.SetTrigger("sheath");
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
