@@ -41,14 +41,10 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         else
             m_animator.SetBool("run", false);
-        direction.y -= gravity_value * Time.deltaTime;
-        controller.Move(direction * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetMouseButtonDown(0))
         {
-            m_animator.SetTrigger("draw");
             m_animator.SetTrigger("attack");
-            m_animator.SetTrigger("sheath");
         }
     }
     private void OnCollisionEnter(Collision collision)

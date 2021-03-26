@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f4979a565dec70c42b8bc706ad8ca0d0
+guid: 2c59d33d40f91e34eba046ce7fe9acb0
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -10,8 +10,8 @@ ModelImporter:
       74: -203655887218126122
     second: mixamo.com
   - first:
-      74: 6200578666267062213
-    second: run
+      74: -3780516532778130023
+    second: run attack
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -24,7 +24,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid copied Avatar Rig Configuration:\n\tNo human bone found.
+      Ensure both rig type match\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -41,18 +42,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: run
+      name: run attack
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 42
+      lastFrame: 139
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -68,13 +69,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1.8
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: mixamo.com
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 42
+      lastFrame: 139
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
