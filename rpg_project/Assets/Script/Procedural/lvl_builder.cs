@@ -242,6 +242,5 @@ public class lvl_builder : MonoBehaviour
         m_surface.BuildNavMesh();
         GameObject temp_enemy = Instantiate(enemy, Ennemy_spawner.position, Ennemy_spawner.rotation);
         Debug.Log("Player : " + final_player.name);
-        temp_enemy.GetComponent<enemy_controller>().player = final_player;
     }
 }

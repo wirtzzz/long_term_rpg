@@ -41,7 +41,6 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         else
             m_animator.SetBool("run", false);
-
         //Ajout gravité
         move_dir = new Vector3(move_dir.x, move_dir.y - 1f, move_dir.z);
         //Move final du player
@@ -51,9 +50,5 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             m_animator.SetTrigger("attack");
         }
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("kartoffel");
     }
 }
