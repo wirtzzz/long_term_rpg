@@ -30,6 +30,7 @@ public class npc_management : MonoBehaviour
             {
                 destinations = storypoints_parent.GetComponentsInChildren<story_point>(true);
                 NextStoryPoint();
+                Debug.Log("Lol");
             }
         }
     }
@@ -61,6 +62,8 @@ public class npc_management : MonoBehaviour
     {
         while (Vector3.Distance(agent.transform.position, agent.destination) > 1.0f)
         {
+            Debug.Log("Lol 2");
+
             yield return null;
         }
         cur_point.SetActive(false);
