@@ -11,6 +11,7 @@ public class npc_management : MonoBehaviour
         Movable,
         Static
     }
+    public int y = 0;
     public TextAsset text_asset;
     public NPCBehaviour behaviour;
     public GameObject storypoints_parent;
@@ -28,19 +29,18 @@ public class npc_management : MonoBehaviour
         {
             if (storypoints_parent != null)
             {
+                Debug.Log("spp exists");
                 destinations = storypoints_parent.GetComponentsInChildren<story_point>(true);
                 NextStoryPoint();
             }
         }
     }
-
     // Update is called once per frame
     protected void NextStoryPoint()
     {
         destinations[cur_dest_index].gameObject.SetActive(true);
         cur_destination = destinations[cur_dest_index].transform.position;
         cur_point = destinations[cur_dest_index].gameObject;
-
         agent.destination = cur_destination;
         if (cur_dest_index == destinations.Length - 1)
             cur_dest_index = 0;

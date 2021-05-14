@@ -9,6 +9,7 @@ public class enemy_controller : MonoBehaviour
 
     protected void Start()
     {
+ 
         m_nav_mesh_agent = this.GetComponent<NavMeshAgent>();
     }
 
