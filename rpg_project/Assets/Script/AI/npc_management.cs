@@ -29,7 +29,6 @@ public class npc_management : MonoBehaviour
         {
             if (storypoints_parent != null)
             {
-                Debug.Log("spp exists");
                 destinations = storypoints_parent.GetComponentsInChildren<story_point>(true);
                 NextStoryPoint();
             }
@@ -61,6 +60,8 @@ public class npc_management : MonoBehaviour
     {
         while (Vector3.Distance(agent.transform.position, agent.destination) > 1.0f)
         {
+
+
             yield return null;
         }
         cur_point.SetActive(false);
@@ -73,5 +74,9 @@ public class npc_management : MonoBehaviour
             gameManager.instance.inkManager.ink_json_asset = text_asset;
             gameManager.instance.inkManager.StartStory();
         }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Oui la collision avec " + collision.gameObject.name);
     }
 }
