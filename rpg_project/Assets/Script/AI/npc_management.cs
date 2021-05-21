@@ -75,8 +75,4 @@ public class npc_management : MonoBehaviour
             gameManager.instance.inkManager.StartStory();
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Oui la collision avec " + collision.gameObject.name);
-    }
 }

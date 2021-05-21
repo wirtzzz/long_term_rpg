@@ -51,4 +51,12 @@ public class ThirdPersonMovement : MonoBehaviour
             m_animator.SetTrigger("attack");
         }
     }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag != "ground")
+        {
+            //TODO ajouter perte de point de vie
+            Debug.Log("Oui le character" + hit.gameObject.name);
+        }
+    }
 }
