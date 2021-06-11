@@ -75,4 +75,11 @@ public class npc_management : MonoBehaviour
             gameManager.instance.inkManager.StartStory();
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "weapon")
+        {
+            Debug.Log("I AM DEAD");
+        }
+    }
 }

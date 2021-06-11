@@ -10,4 +10,13 @@ public class ghost_controller : npc_management
     {
         //this.gameObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + GHOST_ALTITUDE, this.transform.position.z);
     }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Debug.Log("non");
+        if (hit.gameObject.tag == "weapon")
+        {
+            Debug.Log("I AM DEAD");
+        }
+    }
+
 }

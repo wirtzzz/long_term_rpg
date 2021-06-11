@@ -53,10 +53,10 @@ public class ThirdPersonMovement : MonoBehaviour
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.tag != "ground")
+
+        if (hit.gameObject.tag == "weapon")
         {
-            //TODO ajouter perte de point de vie
-            Debug.Log("Oui le character" + hit.gameObject.name);
+            Debug.Log("I AM DEAD");
         }
     }
 }

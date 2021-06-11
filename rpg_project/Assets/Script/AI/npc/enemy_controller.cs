@@ -13,8 +13,13 @@ public class enemy_controller : MonoBehaviour
         m_nav_mesh_agent = this.GetComponent<NavMeshAgent>();
     }
 
-    protected void OnCollisionEnter(Collision collision)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Debug.Log("pouet 2");
+        Debug.Log("non");
+        if (hit.gameObject.tag == "weapon")
+        {
+            Debug.Log("I AM DEAD");
+        }
     }
+
 }
