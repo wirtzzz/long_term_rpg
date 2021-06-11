@@ -16,6 +16,7 @@ public class npc_management : MonoBehaviour
     public NPCBehaviour behaviour;
     public GameObject storypoints_parent;
     public Vector3 cur_destination;
+    public Character m_character;
     protected story_point[] destinations;
     protected int cur_dest_index = 0;
     protected GameObject cur_point;
@@ -79,7 +80,8 @@ public class npc_management : MonoBehaviour
     {
         if (collision.gameObject.tag == "weapon")
         {
-            Debug.Log("I AM DEAD");
+            m_character.TakeDamages(collision.gameObject.GetComponent<weapon>().damages);
+
         }
     }
 }

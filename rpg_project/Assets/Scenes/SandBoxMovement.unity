@@ -263,6 +263,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 5830020}
 --- !u!114 &5830022
 MonoBehaviour:
@@ -668,6 +669,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 16516959}
   agent: {fileID: 16516958}
 --- !u!195 &16516958
 NavMeshAgent:
@@ -691,6 +693,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &16516959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16516955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT2
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1 &31914022
 GameObject:
   m_ObjectHideFlags: 3
@@ -1074,6 +1092,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 101594100}
 --- !u!114 &101594102
 MonoBehaviour:
@@ -1915,6 +1934,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 176134912}
 --- !u!114 &176134914
 MonoBehaviour:
@@ -1979,6 +1999,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 181745810}
 --- !u!114 &181745812
 MonoBehaviour:
@@ -1998,6 +2019,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &181745813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181745809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT15
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1 &207404123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2365,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 267586663}
 --- !u!114 &267586665
 MonoBehaviour:
@@ -2776,6 +2814,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 291485503}
   agent: {fileID: 291485502}
 --- !u!195 &291485502
 NavMeshAgent:
@@ -2799,6 +2838,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &291485503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291485499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT1
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1001 &293705698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3185,6 +3240,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 293705703}
   agent: {fileID: 293705702}
 --- !u!195 &293705702
 NavMeshAgent:
@@ -3208,6 +3264,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &293705703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293705699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT8
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1 &305502621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,6 +3364,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 319385331}
   agent: {fileID: 319385330}
 --- !u!195 &319385330
 NavMeshAgent:
@@ -3315,6 +3388,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &319385331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319385327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT10
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1001 &328662788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3748,6 +3837,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 383860144}
 --- !u!114 &383860146
 MonoBehaviour:
@@ -4227,6 +4317,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 415304358}
   agent: {fileID: 415304357}
 --- !u!195 &415304357
 NavMeshAgent:
@@ -4250,6 +4341,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &415304358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415304354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT7
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1 &415951640
 GameObject:
   m_ObjectHideFlags: 0
@@ -4567,6 +4674,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 488524921}
 --- !u!195 &488524921
 NavMeshAgent:
@@ -4590,6 +4698,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &488524922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488524918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT12
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1 &505670036
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,6 +4844,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 511138735}
 --- !u!114 &511138737
 MonoBehaviour:
@@ -4910,6 +5035,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 559852875}
 --- !u!114 &559852877
 MonoBehaviour:
@@ -5323,6 +5449,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 851117333}
 --- !u!114 &851117335
 MonoBehaviour:
@@ -5682,6 +5809,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 1517948023}
   agent: {fileID: 979944779}
 --- !u!114 &979944784
 MonoBehaviour:
@@ -5785,6 +5913,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 1014372434}
 --- !u!195 &1014372434
 NavMeshAgent:
@@ -5808,6 +5937,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1014372435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014372431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT11
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1 &1016662710
 GameObject:
   m_ObjectHideFlags: 0
@@ -5939,6 +6084,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 1070257855}
 --- !u!114 &1070257857
 MonoBehaviour:
@@ -6344,6 +6490,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 1099181508}
   agent: {fileID: 1099181507}
 --- !u!195 &1099181507
 NavMeshAgent:
@@ -6367,6 +6514,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1099181508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099181504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT3
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &1113016873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 102810, guid: b0297681c8568974da8dc86f4cdc853c,
@@ -6408,6 +6571,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 1113016877}
   agent: {fileID: 1113016876}
 --- !u!195 &1113016876
 NavMeshAgent:
@@ -6431,6 +6595,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1113016877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113016873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT9
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1001 &1117208283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8748,6 +8928,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 1432153274}
   agent: {fileID: 1432153273}
 --- !u!195 &1432153273
 NavMeshAgent:
@@ -8771,6 +8952,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1432153274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432153270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT3
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &1476064308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 102810, guid: b0297681c8568974da8dc86f4cdc853c,
@@ -8816,6 +9013,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 1476064309}
 --- !u!114 &1476064311
 MonoBehaviour:
@@ -9264,6 +9462,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 1507914162}
   agent: {fileID: 1507914161}
 --- !u!195 &1507914161
 NavMeshAgent:
@@ -9287,6 +9486,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1507914162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507914158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT6
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1 &1516157491
 GameObject:
   m_ObjectHideFlags: 0
@@ -9336,6 +9551,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1518050796}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1517948023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517948022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT0
+  m_pv: 100
+  m_resistance: 5
+  is_pnj: 1
 --- !u!1001 &1518050796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11757,6 +11988,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 1731126354}
 --- !u!114 &1731126356
 MonoBehaviour:
@@ -11776,6 +12008,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1731126357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731126353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT16
+  m_pv: 0
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1001 &1732961802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12257,6 +12505,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 1740220334}
 --- !u!195 &1740220334
 NavMeshAgent:
@@ -12280,6 +12529,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1740220335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740220331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT14
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1001 &1744211726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13932,6 +14197,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 0}
   agent: {fileID: 1869009513}
 --- !u!114 &1869009515
 MonoBehaviour:
@@ -14872,6 +15138,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 1967705595}
   agent: {fileID: 1967705594}
 --- !u!195 &1967705594
 NavMeshAgent:
@@ -14895,6 +15162,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1967705595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967705591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT5
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1001 &1977889537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15281,6 +15564,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
+  m_character: {fileID: 1977889542}
   agent: {fileID: 1977889541}
 --- !u!195 &1977889541
 NavMeshAgent:
@@ -15304,6 +15588,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1977889542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977889538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT3
+  m_pv: 50
+  m_resistance: 0
+  is_pnj: 1
 --- !u!1 &1989954839
 GameObject:
   m_ObjectHideFlags: 0
