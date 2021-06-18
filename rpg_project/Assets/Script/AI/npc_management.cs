@@ -6,24 +6,37 @@ using UnityEngine.AI;
 
 public class npc_management : MonoBehaviour
 {
+    //PUBLIC
     public enum NPCBehaviour
     {
         Movable,
         Static
     }
+    public enum CharState
+    {
+        alive,
+        dead
+    }
+    public CharState m_Current_State;
     public int y = 0;
     public TextAsset text_asset;
+
     public NPCBehaviour behaviour;
     public GameObject storypoints_parent;
     public Vector3 cur_destination;
+    public NavMeshAgent agent;
+
     public Character m_character;
+
+    //PROTECTED
     protected story_point[] destinations;
     protected int cur_dest_index = 0;
     protected GameObject cur_point;
     protected Outline outline_script;
-    public NavMeshAgent agent;
     void Start()
     {
+        m_Current_State = CharState.alive;
+
         outline_script = GetComponent<Outline>();
         outline_script.enabled = false;
         if (behaviour == NPCBehaviour.Movable)

@@ -13,17 +13,12 @@ public class ghost_controller : npc_management
 
     private void Update()
     {
-        if(this.GetComponent<Character>().m_pv <= 0)
+        if(this.GetComponent<Character>().m_pv <= 0 && m_Current_State == CharState.alive)
         {
             this.GetComponent<Animator>().SetTrigger("DEATH");
-        }
-    }
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        Debug.Log("non");
-        if (hit.gameObject.tag == "weapon")
-        {
             Debug.Log("I AM DEAD");
+            agent.isStopped = true;
+            this.gameObject.transform.position = new Vector3(this.transform.position.x, 0, this.transform.position.z);
         }
     }
 }
