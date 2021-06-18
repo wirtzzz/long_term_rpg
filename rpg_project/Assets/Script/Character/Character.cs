@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
         this.m_pv -= dmg;
         if (this.m_pv <= 0)
         {
-            Destroy(this.gameObject);
+
         }
     }
 

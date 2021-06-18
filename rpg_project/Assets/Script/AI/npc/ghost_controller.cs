@@ -10,6 +10,14 @@ public class ghost_controller : npc_management
     {
         //this.gameObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + GHOST_ALTITUDE, this.transform.position.z);
     }
+
+    private void Update()
+    {
+        if(this.GetComponent<Character>().m_pv <= 0)
+        {
+            this.GetComponent<Animator>().SetTrigger("DEATH");
+        }
+    }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Debug.Log("non");
@@ -18,5 +26,4 @@ public class ghost_controller : npc_management
             Debug.Log("I AM DEAD");
         }
     }
-
 }

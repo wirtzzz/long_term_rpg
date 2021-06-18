@@ -263,7 +263,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 5830023}
   agent: {fileID: 5830020}
 --- !u!114 &5830022
 MonoBehaviour:
@@ -283,6 +283,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &5830023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT21
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1001 &16516954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1092,7 +1108,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 101594103}
   agent: {fileID: 101594100}
 --- !u!114 &101594102
 MonoBehaviour:
@@ -1112,6 +1128,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &101594103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101594099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT17
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1001 &104699901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1934,7 +1966,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 176134915}
   agent: {fileID: 176134912}
 --- !u!114 &176134914
 MonoBehaviour:
@@ -1954,6 +1986,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &176134915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176134911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT26
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &181745809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 102810, guid: b0297681c8568974da8dc86f4cdc853c,
@@ -1999,7 +2047,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 181745813}
   agent: {fileID: 181745810}
 --- !u!114 &181745812
 MonoBehaviour:
@@ -2365,7 +2413,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 267586666}
   agent: {fileID: 267586663}
 --- !u!114 &267586665
 MonoBehaviour:
@@ -2385,6 +2433,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &267586666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267586662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT23
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &289472149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,7 +3901,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 383860147}
   agent: {fileID: 383860144}
 --- !u!114 &383860146
 MonoBehaviour:
@@ -3857,6 +3921,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &383860147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383860143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT18
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &392202448
 GameObject:
   m_ObjectHideFlags: 3
@@ -4674,7 +4754,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 488524922}
   agent: {fileID: 488524921}
 --- !u!195 &488524921
 NavMeshAgent:
@@ -4844,7 +4924,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 511138738}
   agent: {fileID: 511138735}
 --- !u!114 &511138737
 MonoBehaviour:
@@ -4864,6 +4944,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &511138738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511138734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT25
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &532708911
 GameObject:
   m_ObjectHideFlags: 3
@@ -5035,7 +5131,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 559852878}
   agent: {fileID: 559852875}
 --- !u!114 &559852877
 MonoBehaviour:
@@ -5055,6 +5151,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &559852878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559852874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT27
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &665079528 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 162860, guid: 880858dfd9b1e784e89d45242bf78d2b,
@@ -5449,7 +5561,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 851117336}
   agent: {fileID: 851117333}
 --- !u!114 &851117335
 MonoBehaviour:
@@ -5469,6 +5581,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &851117336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851117332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT20
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!4 &862871140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2819406039949077416, guid: d32fbc694845f1c4f89039875a7868e7,
@@ -5913,7 +6041,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 1014372435}
   agent: {fileID: 1014372434}
 --- !u!195 &1014372434
 NavMeshAgent:
@@ -6084,7 +6212,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 1070257858}
   agent: {fileID: 1070257855}
 --- !u!114 &1070257857
 MonoBehaviour:
@@ -6104,6 +6232,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1070257858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070257854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT19
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1001 &1099181503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8964,7 +9108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_character_name: CT3
+  m_character_name: CT13
   m_pv: 50
   m_resistance: 0
   is_pnj: 0
@@ -9013,7 +9157,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 1476064312}
   agent: {fileID: 1476064309}
 --- !u!114 &1476064311
 MonoBehaviour:
@@ -9033,6 +9177,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1476064312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476064308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT22
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &1495080810
 GameObject:
   m_ObjectHideFlags: 0
@@ -11988,7 +12148,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1325519374}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 1731126357}
   agent: {fileID: 1731126354}
 --- !u!114 &1731126356
 MonoBehaviour:
@@ -12021,7 +12181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_character_name: CT16
-  m_pv: 0
+  m_pv: 100
   m_resistance: 0
   is_pnj: 0
 --- !u!1001 &1732961802
@@ -12505,7 +12665,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 966230274}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 1740220335}
   agent: {fileID: 1740220334}
 --- !u!195 &1740220334
 NavMeshAgent:
@@ -14197,7 +14357,7 @@ MonoBehaviour:
   behaviour: 0
   storypoints_parent: {fileID: 1709178142}
   cur_destination: {x: 0, y: 0, z: 0}
-  m_character: {fileID: 0}
+  m_character: {fileID: 1869009516}
   agent: {fileID: 1869009513}
 --- !u!114 &1869009515
 MonoBehaviour:
@@ -14217,6 +14377,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1869009516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869009512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba226bf1cefad0a4ba2aeae3564e6275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character_name: CT24
+  m_pv: 100
+  m_resistance: 0
+  is_pnj: 0
 --- !u!1 &1877907885
 GameObject:
   m_ObjectHideFlags: 0

@@ -81,7 +81,6 @@ public class npc_management : MonoBehaviour
         if (collision.gameObject.tag == "weapon")
         {
             m_character.TakeDamages(collision.gameObject.GetComponent<weapon>().damages);
-
         }
     }
 }
