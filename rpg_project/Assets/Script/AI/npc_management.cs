@@ -12,6 +12,11 @@ public class npc_management : MonoBehaviour
         Movable,
         Static
     }
+    public enum VigilanceState
+    {
+        Patrolling,
+        Attacking
+    }
     public enum CharState
     {
         alive,
@@ -20,7 +25,7 @@ public class npc_management : MonoBehaviour
     public CharState m_Current_State;
     public int y = 0;
     public TextAsset text_asset;
-
+    public VigilanceState m_vigilance_state;
     public NPCBehaviour behaviour;
     public GameObject storypoints_parent;
     public Vector3 cur_destination;
@@ -41,6 +46,7 @@ public class npc_management : MonoBehaviour
         outline_script.enabled = false;
         if (behaviour == NPCBehaviour.Movable)
         {
+            m_vigilance_state = VigilanceState.Patrolling;
             if (storypoints_parent != null)
             {
                 destinations = storypoints_parent.GetComponentsInChildren<story_point>(true);
@@ -48,6 +54,8 @@ public class npc_management : MonoBehaviour
             }
         }
     }
+
+
     // Update is called once per frame
     protected void NextStoryPoint()
     {
